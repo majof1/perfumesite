@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow8" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#115e59" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="bottleGrad8" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#2dd4bf" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#0d9488" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="capGrad8" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e2e8f0" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#e2e8f0" stop-opacity="0.8"/>
+    </linearGradient>
+    <filter id="glassGlow8" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" rx="20" fill="url(#bgGlow8)" />
+  
+  <!-- Ambient backdrop lighting -->
+  <circle cx="200" cy="240" r="140" fill="#2dd4bf" opacity="0.18" filter="url(#glassGlow8)"/>
+
+  <!-- Pedestal shadow -->
+  <ellipse cx="200" cy="420" rx="90" ry="18" fill="#000000" opacity="0.5" filter="url(#glassGlow8)"/>
+
+  <!-- Bottle Cap & Spray Head -->
+  <rect x="175" y="100" width="50" height="45" rx="6" fill="url(#capGrad8)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+  <rect x="188" y="85" width="24" height="15" rx="3" fill="url(#capGrad8)"/>
+  <rect x="195" y="75" width="10" height="10" rx="2" fill="#99f6e4"/>
+
+  <!-- Bottle Neck -->
+  <rect x="165" y="145" width="70" height="25" rx="4" fill="url(#capGrad8)" opacity="0.9"/>
+  <rect x="170" y="152" width="60" height="4" fill="#99f6e4"/>
+
+  <!-- Main Glass Bottle Body -->
+  <path d="M 120 170 L 280 170 C 300 170 310 185 310 205 L 300 380 C 300 395 285 405 265 405 L 135 405 C 115 405 100 395 100 380 L 90 205 C 90 185 100 170 120 170 Z" 
+        fill="url(#bottleGrad8)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+
+  <!-- Glass Highlight Reflections -->
+  <path d="M 110 190 Q 120 370 125 390" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 290 190 Q 280 370 275 390" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Glass Label Box (Glassmorphic plaque) -->
+  <rect x="135" y="240" width="130" height="100" rx="12" fill="rgba(15, 23, 42, 0.75)" stroke="#99f6e4" stroke-width="1.5" />
+
+  <!-- Label Typography -->
+  <text x="200" y="268" text-anchor="middle" fill="#ffffff" font-family="'Playfair Display', Georgia, serif" font-size="12" font-weight="bold" letter-spacing="1.5">ÉLIXIR DE LUXE</text>
+  <line x1="155" y1="278" x2="245" y2="278" stroke="#99f6e4" stroke-width="1" />
+  <text x="200" y="296" text-anchor="middle" fill="#99f6e4" font-family="'Outfit', sans-serif" font-size="11" font-weight="700" letter-spacing="1">AZURE CITRUS</text>
+  <text x="200" y="312" text-anchor="middle" fill="#e2e8f0" font-family="'Outfit', sans-serif" font-size="9" letter-spacing="2">ELIXIR</text>
+  <text x="200" y="328" text-anchor="middle" fill="#94a3b8" font-family="'Outfit', sans-serif" font-size="8">100ml / 3.4 fl oz</text>
+</svg>
